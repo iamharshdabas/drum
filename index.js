@@ -1,8 +1,8 @@
 let drum = document.querySelectorAll('.drum');
 
 for (let i = 0; i < drum.length; i++) {
-  drum[i].addEventListener('click', function () {
-    switch (this.innerText) {
+  drum[i].addEventListener('keypress', function (event) {
+    switch (event.key) {
       case 'w':
         let audio_w = new Audio('sounds/tom-0.mp3');
         audio_w.play();
