@@ -1,4 +1,4 @@
-document.addEventListener('keypress', function (event) {
+document.addEventListener('keypress', (event) => {
   const audio_w = new Audio('sounds/tom-0.mp3');
   const audio_a = new Audio('sounds/tom-1.mp3');
   const audio_s = new Audio('sounds/tom-2.mp3');
@@ -31,4 +31,8 @@ document.addEventListener('keypress', function (event) {
     default:
       break;
   }
+  document.querySelector('.' + event.key).classList.add("pressed")
+  setTimeout(() => {
+    document.querySelector('.' + event.key).classList.remove("pressed")
+  }, 126);
 })
